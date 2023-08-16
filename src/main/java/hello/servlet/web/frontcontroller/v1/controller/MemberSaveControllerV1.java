@@ -18,7 +18,8 @@ public class MemberSaveControllerV1 implements ControllerV1 {
     String username = request.getParameter("username");
     int age = Integer.parseInt(request.getParameter("age"));
 
-    Member member = new Member(username, age);
+    Member member = new Member(username
+        , age);
     memberRepository.save(member);
 
     //Model에 데이터를 보관한다.
